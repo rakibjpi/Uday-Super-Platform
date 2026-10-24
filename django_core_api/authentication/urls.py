@@ -10,5 +10,6 @@ from . import views
 urlpatterns = [
     path('users/', views.users, name='users'),
     path('',  include(router.urls)),
+    path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     
 ]
